@@ -1,0 +1,17 @@
+{
+    "name": "agentmail-schemas",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.ts",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "packageManager": "pnpm@10.12.1",
+    "devDependencies": {
+        "prettier": "3.7.4",
+        "typescript": "^5.9.3"
+    }
+}
