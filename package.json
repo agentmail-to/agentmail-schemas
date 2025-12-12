@@ -2,8 +2,8 @@
     "name": "agentmail-schemas",
     "version": "1.0.0",
     "description": "AgentMail Schemas",
-    "main": "index.ts",
     "scripts": {
+        "build": "tsup",
         "prettier": "prettier --write ."
     },
     "keywords": [],
@@ -12,6 +12,18 @@
     "packageManager": "pnpm@10.12.1",
     "devDependencies": {
         "prettier": "3.7.4",
+        "tsup": "^8.5.1",
         "typescript": "^5.9.3"
+    },
+    "type": "module",
+    "files": [
+        "dist"
+    ],
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.js",
+            "require": "./dist/index.cjs"
+        }
     }
 }
