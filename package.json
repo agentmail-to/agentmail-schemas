@@ -24,6 +24,34 @@
             "types": "./dist/index.d.ts",
             "import": "./dist/index.js",
             "require": "./dist/index.cjs"
+        },
+        "./attachment": {
+            "types": "./dist/attachment.d.ts",
+            "import": "./dist/attachment.js",
+            "require": "./dist/attachment.cjs"
+        },
+        "./message": {
+            "types": "./dist/message.d.ts",
+            "import": "./dist/message.js",
+            "require": "./dist/message.cjs"
+        },
+        "./thread": {
+            "types": "./dist/thread.d.ts",
+            "import": "./dist/thread.js",
+            "require": "./dist/thread.cjs"
+        },
+        "./domain": {
+            "types": "./dist/domain.d.ts",
+            "import": "./dist/domain.js",
+            "require": "./dist/domain.cjs"
+        },
+        "./events": {
+            "types": "./dist/events.d.ts",
+            "import": "./dist/events.js",
+            "require": "./dist/events.cjs"
         }
+    },
+    "dependencies": {
+        "zod": "^4.1.13"
     }
 }
