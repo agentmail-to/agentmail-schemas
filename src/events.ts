@@ -17,14 +17,12 @@ export const EventTypeSchema = z.enum([
 const EventSchema = z.object({
     type: z.literal('event'),
     event_type: EventTypeSchema,
-    event_id: z.uuid(),
 })
 
 export const MessageReceivedEventSchema = EventSchema.extend({
     event_type: z.literal('message.received'),
     message: MessageSchema,
     thread: ThreadMetadataSchema,
-    body_included: z.boolean(),
 })
 
 const MessageEventSchema = z.object({
@@ -38,6 +36,11 @@ const MessageEventSchema = z.object({
 export const MessageSentEventSchema = EventSchema.extend({
     event_type: z.literal('message.sent'),
     send: MessageEventSchema.extend({ recipients: z.array(z.email()) }),
+})
+
+export const MessageDeliveredEventSchema = EventSchema.extend({
+    event_type: z.literal('message.delivered'),
+    delivered: MessageEventSchema.extend({ recipients: z.array(z.email()) }),
 })
 
 export const MessageBouncedEventSchema = EventSchema.extend({
@@ -56,11 +59,6 @@ export const MessageComplainedEventSchema = EventSchema.extend({
         sub_type: z.string().optional(),
         recipients: z.array(z.email()),
     }),
-})
-
-export const MessageDeliveredEventSchema = EventSchema.extend({
-    event_type: z.literal('message.delivered'),
-    delivered: MessageEventSchema.extend({ recipients: z.array(z.email()) }),
 })
 
 export const MessageRejectedEventSchema = EventSchema.extend({
