@@ -1,6 +1,6 @@
 {
     "name": "agentmail-schemas",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "AgentMail Schemas",
     "scripts": {
         "build": "tsup",
@@ -9,16 +9,12 @@
     "keywords": ["agentMail", "schemas", "zod"],
     "author": "AgentMail <support@agentmail.cc>",
     "license": "MIT",
+    "homepage": "https://agentmail.to",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/agentmail-to/agentmail-schemas.git"
     },
     "packageManager": "pnpm@10.12.1",
-    "devDependencies": {
-        "prettier": "3.7.4",
-        "tsup": "^8.5.1",
-        "typescript": "^5.9.3"
-    },
     "type": "module",
     "files": ["dist"],
     "exports": {
@@ -55,5 +51,10 @@
     },
     "dependencies": {
         "zod": "^4.1.13"
+    },
+    "devDependencies": {
+        "prettier": "3.7.4",
+        "tsup": "^8.5.1",
+        "typescript": "^5.9.3"
     }
 }
