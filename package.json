@@ -6,7 +6,11 @@
         "build": "tsup",
         "prettier": "prettier --write ."
     },
-    "keywords": ["agentMail", "schemas", "zod"],
+    "keywords": [
+        "agentmail",
+        "schemas",
+        "zod"
+    ],
     "author": "AgentMail <support@agentmail.cc>",
     "license": "MIT",
     "homepage": "https://agentmail.to",
@@ -16,7 +20,9 @@
     },
     "packageManager": "pnpm@10.12.1",
     "type": "module",
-    "files": ["dist"],
+    "files": [
+        "dist"
+    ],
     "exports": {
         ".": {
             "types": "./dist/index.d.ts",
